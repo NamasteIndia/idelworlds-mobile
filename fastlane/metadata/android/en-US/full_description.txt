@@ -1,0 +1,12 @@
+Unofficial Android client for IdleWorlds (idleworlds.com).
+
+Play the free browser MMO idle RPG on your phone with a dedicated app wrapper. Includes a Greasemonkey-compatible script manager so you can install and run userscripts.
+
+Features:
+- Full-screen WebView for idleworlds.com
+- Script Manager (add URL or custom scripts, enable/disable)
+- Reload game from the app menu
+
+This app is not affiliated with IdleWorlds. It collects no user data.
+
+Based on the MIT-licensed Unofficial Milky Way Idle for Android project.
