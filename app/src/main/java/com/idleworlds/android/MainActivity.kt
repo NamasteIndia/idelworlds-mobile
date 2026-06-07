@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     ) { granted ->
         pendingNotificationRequest?.let { request ->
             if (granted) {
-                request.grant(arrayOf(PermissionRequest.RESOURCE_NOTIFICATION))
+                request.grant(arrayOf(WEBVIEW_RESOURCE_NOTIFICATION))
             } else {
                 request.deny()
             }
@@ -145,13 +145,13 @@ class MainActivity : AppCompatActivity() {
                     return
                 }
 
-                if (!request.resources.contains(PermissionRequest.RESOURCE_NOTIFICATION)) {
+                if (!request.resources.contains(WEBVIEW_RESOURCE_NOTIFICATION)) {
                     request.deny()
                     return
                 }
 
                 if (NotificationHelper.hasPermission(this@MainActivity)) {
-                    request.grant(arrayOf(PermissionRequest.RESOURCE_NOTIFICATION))
+                    request.grant(arrayOf(WEBVIEW_RESOURCE_NOTIFICATION))
                 } else {
                     pendingNotificationRequest = request
                     requestNotificationPermissionIfNeeded()
@@ -358,5 +358,6 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val GAME_URL = "https://www.idleworlds.com/"
         private const val GAME_HOST = "https://www.idleworlds.com"
+        private const val WEBVIEW_RESOURCE_NOTIFICATION = "android.webkit.resource.NOTIFICATION"
     }
 }
