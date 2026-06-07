@@ -10,7 +10,5 @@
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
         <item name="android:navigationBarColor">@color/bar_color</item>
         <item name="android:statusBarColor">@color/bar_color</item>
-
-        <item name="cardBackgroundColor">@color/card_background</item>
     </style>
 </resources>
