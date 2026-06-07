@@ -2,16 +2,28 @@
 
 *This is not developed by or affiliated with IdleWorlds.*
 
-**This is an unofficial Android client for IdleWorlds with a built-in userscript manager.**
+**This is an unofficial Android client for IdleWorlds with native notification support.**
 
 Based on [Unofficial Milky Way Idle for Android](https://github.com/McPeyen/Unofficial-Milky-Way-Idle-for-Android) by McPeyen (MIT License).
 
 ## Features
 
 - **WebView wrapper** for [idleworlds.com](https://www.idleworlds.com)
-- **Custom JavaScript support** via Greasemonkey-compatible userscripts
-- **Script Manager** — add, enable, disable, and remove scripts
-- **Built on webview-gm** — [webview-gm](https://github.com/wbayer/webview-gm)
+- **Push notification support** — world boss alerts and in-game notifications while the app is in the background
+- **Notification permission handling** for in-app notification prompts
+
+## Notifications
+
+Android WebView does not support browser Web Push directly. This app bridges that gap by:
+
+1. Polyfilling `pushManager` so IdleWorlds' notification settings work in the app
+2. Polling the game API in a background service when notifications are enabled
+3. Showing native Android alerts for unread notifications and world boss changes
+
+To enable notifications:
+
+1. Allow notifications when the app asks on first launch
+2. In IdleWorlds, enable world boss notifications (or use the in-game test button in Settings)
 
 ## Installation
 
@@ -26,8 +38,8 @@ The workflow also runs automatically on pushes to `main`/`master` and on pull re
 To attach APKs to a GitHub Release, create and push a version tag:
 
 ```bash
-git tag v1.0.0
-git push origin v1.0.0
+git tag v1.1.0
+git push origin v1.1.0
 ```
 
 Optional release signing secrets (otherwise the release APK is signed with the debug key):
@@ -50,8 +62,7 @@ The APK will be at `app/build/outputs/apk/debug/app-debug.apk`.
 ## Usage
 
 - Open the app to load IdleWorlds in a full-screen WebView
-- Tap the **⋮** menu for **Script Manager** or **Reload Game**
-- Script changes require a reload or app restart to take effect
+- Tap the **⋮** menu for **Reload Game**
 
 ## Privacy Policy
 

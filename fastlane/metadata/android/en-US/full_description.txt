@@ -1,10 +1,10 @@
 Unofficial Android client for IdleWorlds (idleworlds.com).
 
-Play the free browser MMO idle RPG on your phone with a dedicated app wrapper. Includes a Greasemonkey-compatible script manager so you can install and run userscripts.
+Play the free browser MMO idle RPG on your phone with a dedicated app wrapper. Includes native notification support for world boss alerts and in-game notifications.
 
 Features:
 - Full-screen WebView for idleworlds.com
-- Script Manager (add URL or custom scripts, enable/disable)
+- Native Android notifications (world boss + in-game alerts)
 - Reload game from the app menu
 
 This app is not affiliated with IdleWorlds. It collects no user data.

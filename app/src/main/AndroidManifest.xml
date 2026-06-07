@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.idleworlds.android">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
 
     <application
         android:allowBackup="true"
@@ -27,11 +29,10 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".ScriptManagerActivity"
+        <service
+            android:name=".NotificationPollingService"
             android:exported="false"
-            android:label="Script Manager"
-            android:parentActivityName=".MainActivity" />
+            android:foregroundServiceType="dataSync" />
 
     </application>
 

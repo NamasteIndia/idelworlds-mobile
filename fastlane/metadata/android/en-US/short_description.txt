@@ -1,1 +1,1 @@
-Unofficial Android client for IdleWorlds with userscript support.
+Unofficial Android client for IdleWorlds with notification support.

@@ -74,7 +74,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="v1.0.0"
+                android:text="v1.1.0"
                 android:textColor="#88FFFFFF"
                 android:textSize="12sp"
                 android:layout_marginBottom="32dp" />
@@ -117,13 +117,12 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Stage 2: Preparing scripts -->
+            <!-- Stage 2: Starting game -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="12dp">
+                android:gravity="center_vertical">
 
                 <FrameLayout
                     android:layout_width="24dp"
@@ -148,44 +147,6 @@
 
                 <TextView
                     android:id="@+id/stage2_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Preparing scripts..."
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    android:alpha="0.5" />
-            </LinearLayout>
-
-            <!-- Stage 3: Starting game -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <FrameLayout
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginEnd="12dp">
-
-                    <ProgressBar
-                        android:id="@+id/stage3_spinner"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:indeterminateTint="#FFFFFF"
-                        android:visibility="gone" />
-
-                    <ImageView
-                        android:id="@+id/stage3_icon"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_stage_pending"
-                        android:visibility="visible"
-                        android:contentDescription="@null" />
-                </FrameLayout>
-
-                <TextView
-                    android:id="@+id/stage3_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Starting game..."

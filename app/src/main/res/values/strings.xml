@@ -1,5 +1,4 @@
 <resources>
     <string name="app_name">IdleWorlds</string>
-    <string name="menu_script_manager">Script Manager</string>
     <string name="menu_reload_game">Reload Game</string>
 </resources>

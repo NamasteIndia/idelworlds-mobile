@@ -21,4 +21,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "IdleWorldsAndroid"
 include(":app")
-include(":webview-gm-lib")
